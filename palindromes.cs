@@ -6,9 +6,11 @@ public class Program
   
   public static void Main()
   {
+   
     Console.WriteLine("Please, provide the string");
     string input = Console.ReadLine();
     char[] word = input.ToCharArray();
+     // To reverse array without using ArrayReverse()
     int number = word.Length;
     char[] reverseWord = new char[number];
     
@@ -18,7 +20,7 @@ public class Program
       reverseWord[j] = word[index];
       index++;
     }
-    
+    // To check if every word of one array = word of anothr array
     int status = 0;
     for (int i=0; i<word.Length; i++){
       if (word[i] == reverseWord[i])
@@ -34,6 +36,6 @@ public class Program
     {
       Console.WriteLine("This is not a palindrome");
     }
-    
+
   }
 }
